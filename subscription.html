@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Subscription | Free Skill Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="checkout-body">
+  <header class="checkout-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo checkout-logo"><i class="fa-solid fa-graduation-cap"></i> Free Skill Learning Hub</a>
+      <a href="dashboard.html" class="checkout-dashboard-link"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="checkout-main">
+    <div class="container">
+      <div class="checkout-intro">
+        <span class="checkout-kicker"><i class="fa-solid fa-shield-halved"></i> Secure student checkout</span>
+        <h1>Start learning free for one week</h1>
+        <p>Verify your student plan today. Payment is required only after verification and your free trial.</p>
+      </div>
+
+      <div class="checkout-layout">
+        <div class="checkout-left">
+          <section class="checkout-section glass-dark-card" aria-labelledby="planHeading">
+            <div class="checkout-section-heading"><span>1</span><div><h2 id="planHeading">Plan details</h2><p>Select the plan you want after your free trial.</p></div></div>
+            <div class="checkout-plans" id="checkoutPlans">
+              <button class="checkout-plan selected" type="button" data-plan="Monthly" data-amount="30" data-months="1">
+                <span class="plan-radio"><i class="fa-solid fa-check"></i></span><span class="plan-copy"><strong>Monthly Plan</strong><small>First 1 week free</small></span><span class="checkout-plan-price"><strong>₹30</strong><small>/ 1 month</small></span>
+              </button>
+              <button class="checkout-plan" type="button" data-plan="3 Months" data-amount="50" data-months="3">
+                <span class="checkout-plan-badge">SAVE MORE</span><span class="plan-radio"><i class="fa-solid fa-check"></i></span><span class="plan-copy"><strong>3 Months Plan</strong><small>First 1 week free</small></span><span class="checkout-plan-price"><strong>₹50</strong><small>/ 3 months</small></span>
+              </button>
+              <button class="checkout-plan" type="button" data-plan="6 Months" data-amount="80" data-months="6">
+                <span class="checkout-plan-badge best">BEST VALUE</span><span class="plan-radio"><i class="fa-solid fa-check"></i></span><span class="plan-copy"><strong>6 Months Plan</strong><small>First 1 week free</small></span><span class="checkout-plan-price"><strong>₹80</strong><small>/ 6 months</small></span>
+              </button>
+            </div>
+          </section>
+
+          <form id="trialForm">
+            <section class="checkout-section glass-dark-card" aria-labelledby="contactHeading">
+              <div class="checkout-section-heading"><span>2</span><div><h2 id="contactHeading">Contact information</h2><p>We will use this email for plan updates.</p></div></div>
+              <label class="dark-field">Email address<input id="trialEmail" type="email" placeholder="student@example.com" autocomplete="email" required /></label>
+            </section>
+
+            <section class="checkout-section glass-dark-card" aria-labelledby="verifyHeading">
+              <div class="checkout-section-heading"><span>3</span><div><h2 id="verifyHeading">Free trial verification</h2><p>Tell us a little about yourself to activate your trial.</p></div></div>
+              <div class="checkout-form-grid">
+                <label class="dark-field">Full name<input id="trialName" type="text" placeholder="Your full name" autocomplete="name" required /></label>
+                <label class="dark-field">Phone number<input id="trialPhone" type="tel" placeholder="10-digit mobile number" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" autocomplete="tel" required /></label>
+                <label class="dark-field full-field">Student status<select id="studentStatus" required><option value="">Select your status</option><option>School Student</option><option>College Student</option><option>Recent Graduate</option><option>Self Learner</option></select></label>
+              </div>
+              <button class="checkout-primary-btn" type="submit"><i class="fa-solid fa-bolt"></i> Activate 1 Week Free Trial</button>
+              <p class="form-feedback" id="trialFeedback" role="status"></p>
+            </section>
+          </form>
+
+          <section class="checkout-section glass-dark-card" aria-labelledby="paymentHeading">
+            <div class="checkout-section-heading"><span>4</span><div><h2 id="paymentHeading">Payment method</h2><p>Payment becomes available after admin verification.</p></div></div>
+            <div class="payment-locked" id="paymentLocked">
+              <div class="lock-icon"><i class="fa-solid fa-lock"></i></div><div><h3>Payment method available after plan verification</h3><p>Activate your free trial and wait for admin approval to unlock bank and UPI details.</p></div><button type="button" disabled><i class="fa-solid fa-plus"></i> Add Payment After Verification</button>
+            </div>
+            <div class="verified-payment" id="verifiedPayment" hidden>
+              <div class="verified-banner"><i class="fa-solid fa-circle-check"></i><div><strong>Plan verification approved</strong><span>Use any payment option below after your free trial.</span></div></div>
+              <div class="checkout-payment-grid">
+                <article><div class="payment-method-title"><i class="fa-solid fa-building-columns"></i><strong>Bank Transfer</strong></div><div class="checkout-detail"><span>Account Name</span><strong>Ramesh S</strong></div><div class="checkout-detail"><span>Account Number</span><div><strong>252501000009577</strong><button class="checkout-copy" data-copy="252501000009577" aria-label="Copy account number"><i class="fa-regular fa-copy"></i></button></div></div><div class="checkout-detail"><span>IFSC Code</span><div><strong>IOBA0002525</strong><button class="checkout-copy" data-copy="IOBA0002525" aria-label="Copy IFSC code"><i class="fa-regular fa-copy"></i></button></div></div></article>
+                <article><div class="payment-method-title"><i class="fa-solid fa-mobile-screen-button"></i><strong>UPI AutoPay</strong></div><p class="payment-helper">Demo recurring payment for your selected plan.</p><div class="checkout-detail"><span>UPI ID</span><div><strong>7418371233-2@ybl</strong><button class="checkout-copy" data-copy="7418371233-2@ybl" aria-label="Copy UPI ID"><i class="fa-regular fa-copy"></i></button></div></div></article>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="checkout-summary glass-dark-card">
+          <div class="summary-top"><span class="summary-icon"><i class="fa-solid fa-graduation-cap"></i></span><div><small>Your subscription</small><h2>Student Subscription Plan</h2></div></div>
+          <ul class="summary-features"><li><i class="fa-solid fa-check"></i> Free skill learning courses</li><li><i class="fa-solid fa-check"></i> Top company certificate links</li><li><i class="fa-solid fa-check"></i> Learning roadmap</li><li><i class="fa-solid fa-check"></i> Progress tracker</li><li><i class="fa-solid fa-check"></i> Portfolio and LinkedIn tips</li></ul>
+          <div class="summary-divider"></div>
+          <div class="summary-line"><span>Selected plan</span><strong id="summaryPlan">Monthly Plan</strong></div>
+          <div class="summary-line"><span>Trial</span><strong class="free-text">First 1 week free</strong></div>
+          <div class="summary-total"><span>Due today</span><strong>₹0</strong></div>
+          <div class="summary-after"><span>After trial</span><strong id="summaryAfter">₹30 monthly auto-pay</strong></div>
+          <button class="checkout-primary-btn summary-button" id="startTrialButton" type="button"><i class="fa-solid fa-arrow-right"></i> Start Free Trial</button>
+          <div class="summary-security"><i class="fa-solid fa-lock"></i> No payment method required today</div>
+          <div class="current-request" id="currentRequest" hidden><span class="request-status" id="requestStatus">Free Trial Active</span><small id="requestTrialEnd"></small></div>
+        </aside>
+      </div>
+
+      <p class="checkout-footer-note"><i class="fa-solid fa-circle-info"></i> Your first 1 week is free. Payment method will be required only after plan verification. After the free trial, your selected plan will continue with auto-pay. You can change or cancel your plan anytime from dashboard.</p>
+    </div>
+  </main>
+  <div class="toast checkout-toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Subscriptions | Free Skill Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /><link rel="stylesheet" href="admin-style.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar"><i class="fa-solid fa-bars"></i></button>
+  <aside class="admin-sidebar" id="adminSidebar">
+    <a href="index.html" class="admin-logo"><i class="fa-solid fa-graduation-cap"></i><span>Skill Hub</span></a>
+    <nav><a href="admin-dashboard.html"><i class="fa-solid fa-chart-pie"></i><span>Overview</span></a><a class="active" href="manage-subscriptions.html"><i class="fa-solid fa-credit-card"></i><span>Subscriptions</span></a><a href="index.html"><i class="fa-solid fa-arrow-left"></i><span>Back to Website</span></a></nav>
+    <div class="admin-profile"><div>AS</div><span><strong>Admin</strong><small>Subscription manager</small></span></div>
+  </aside>
+  <main class="admin-main">
+    <header class="admin-header"><div><p class="eyebrow">Admin panel</p><h1>Manage Subscriptions</h1><p>Review student verification, free trials, and payments.</p></div></header>
+    <section class="mini-stat-grid"><div><span>Total</span><strong id="manageTotal">0</strong></div><div><span>Active</span><strong id="manageActive">0</strong></div><div><span>Pending</span><strong id="managePending">0</strong></div><div><span>Expired</span><strong id="manageExpired">0</strong></div></section>
+    <section class="admin-panel">
+      <div class="toolbar"><label class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="subscriptionSearch" type="search" placeholder="Search student, email, or phone" /></label><select id="statusFilter" aria-label="Filter by status"><option value="all">All statuses</option><option value="pending-verification">Pending Verification</option><option value="trial-active">Free Trial Active</option><option value="payment-required">Payment Required</option><option value="active">Active</option><option value="rejected">Rejected</option><option value="cancelled">Cancelled</option><option value="expired">Expired</option></select><select id="planFilter" aria-label="Filter by plan"><option value="all">All plans</option><option value="Monthly">Monthly</option><option value="3 Months">3 Months</option><option value="6 Months">6 Months</option></select></div>
+      <div class="table-wrap"><table class="management-table"><thead><tr><th>Student</th><th>Phone</th><th>Selected Plan</th><th>Trial Start</th><th>Trial End</th><th>Status</th><th>Actions</th></tr></thead><tbody id="subscriptionTableBody"></tbody></table></div>
+      <div class="empty-state" id="emptyState"><i class="fa-solid fa-inbox"></i><h3>No subscriptions found</h3><p>New demo subscriptions will appear here.</p></div>
+    </section>
+  </main>
+  <div class="admin-toast" id="adminToast" role="status"></div>
+  <script src="admin-script.js"></script>
+</body>
+</html>

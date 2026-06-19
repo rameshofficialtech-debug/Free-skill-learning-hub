@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Free Skill Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /><link rel="stylesheet" href="admin-style.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar"><i class="fa-solid fa-bars"></i></button>
+  <aside class="admin-sidebar" id="adminSidebar">
+    <a href="index.html" class="admin-logo"><i class="fa-solid fa-graduation-cap"></i><span>Skill Hub</span></a>
+    <nav><a class="active" href="admin-dashboard.html"><i class="fa-solid fa-chart-pie"></i><span>Overview</span></a><a href="manage-subscriptions.html"><i class="fa-solid fa-credit-card"></i><span>Subscriptions</span></a><a href="index.html"><i class="fa-solid fa-arrow-left"></i><span>Back to Website</span></a></nav>
+    <div class="admin-profile"><div>AS</div><span><strong>Admin</strong><small>Subscription manager</small></span></div>
+  </aside>
+  <main class="admin-main">
+    <header class="admin-header"><div><p class="eyebrow">Admin panel</p><h1>Subscription Overview</h1></div><a class="gradient-btn" href="manage-subscriptions.html"><i class="fa-solid fa-gear"></i> Manage</a></header>
+    <section class="stat-grid">
+      <article class="stat-card purple"><div class="stat-icon"><i class="fa-solid fa-users"></i></div><div><span>Total Subscribers</span><strong id="totalSubscribers">0</strong></div></article>
+      <article class="stat-card green"><div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div><div><span>Active Subscriptions</span><strong id="activeSubscriptions">0</strong></div></article>
+      <article class="stat-card amber"><div class="stat-icon"><i class="fa-solid fa-clock"></i></div><div><span>Pending Verification</span><strong id="pendingPayments">0</strong></div></article>
+      <article class="stat-card red"><div class="stat-icon"><i class="fa-solid fa-calendar-xmark"></i></div><div><span>Expired</span><strong id="expiredSubscriptions">0</strong></div></article>
+    </section>
+    <section class="admin-panel"><div class="panel-head"><div><p class="eyebrow">Latest activity</p><h2>Recent Subscriptions</h2></div><a href="manage-subscriptions.html">View all <i class="fa-solid fa-arrow-right"></i></a></div><div class="table-wrap"><table><thead><tr><th>Student</th><th>Plan</th><th>Amount</th><th>Status</th><th>Expiry</th></tr></thead><tbody id="recentSubscriptions"></tbody></table></div></section>
+  </main>
+  <script src="admin-script.js"></script>
+</body>
+</html>

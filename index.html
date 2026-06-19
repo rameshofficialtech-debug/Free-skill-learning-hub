@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Skill Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo"><i class="fa-solid fa-graduation-cap"></i> Free Skill Learning Hub</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a class="active-link" href="index.html">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#tips">Tips</a></li>
+        <li><a href="subscription.html">Subscription</a></li>
+        <li><a class="nav-btn" href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-padding">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="badge"><i class="fa-solid fa-star"></i> 100% Free Learning</span>
+          <h1>Learn Skills for Free & Earn Certificates</h1>
+          <p>Designed for students and beginners to discover free courses, earn certificates, and follow step-by-step learning plans.</p>
+          <div class="hero-buttons">
+            <a href="#courses" class="btn primary-btn">Start Learning</a>
+            <a href="#certificates" class="btn secondary-btn">Explore Certificates</a>
+          </div>
+          <div class="hero-stats"><div><strong>7+</strong><span>Skill paths</span></div><div><strong>8</strong><span>Top providers</span></div><div><strong>100%</strong><span>Beginner friendly</span></div></div>
+        </div>
+        <div class="hero-card reveal">
+          <div class="hero-card-top">
+            <i class="fa-solid fa-laptop-code hero-icon"></i>
+            <span class="tag">Student Friendly</span>
+          </div>
+          <h3>Recommended Learning Path</h3>
+          <div class="progress-box">
+            <p>Web Development</p><span>70%</span>
+          </div>
+          <div class="progress-line"><div style="width:70%"></div></div>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check"></i> Learn basics</li>
+            <li><i class="fa-solid fa-check"></i> Build mini projects</li>
+            <li><i class="fa-solid fa-check"></i> Add to portfolio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section-padding">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Free Courses</span>
+          <h2>Choose Your Skill</h2>
+          <p>Explore beginner-friendly categories made for students who want to learn fast.</p>
+        </div>
+        <div class="cards-grid courses-grid" id="coursesGrid">
+          <article class="course-card reveal">
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development</h3>
+            <p>Level: Beginner</p>
+            <p>Duration: 30 Days</p>
+            <a href="https://www.freecodecamp.org/learn/" target="_blank" class="small-btn">Learn Now</a>
+          </article>
+          <article class="course-card reveal">
+            <i class="fa-solid fa-brain"></i>
+            <h3>AI & ML</h3>
+            <p>Level: Beginner</p>
+            <p>Duration: 45 Days</p>
+            <a href="https://www.coursera.org/learn/ai-for-everyone" target="_blank" class="small-btn">Learn Now</a>
+          </article>
+          <article class="course-card reveal">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Data Analytics</h3>
+            <p>Level: Beginner</p>
+            <p>Duration: 40 Days</p>
+            <a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" class="small-btn">Learn Now</a>
+          </article>
+          <article class="course-card reveal">
+            <i class="fa-solid fa-bullhorn"></i>
+            <h3>Digital Marketing</h3>
+            <p>Level: Beginner</p>
+            <p>Duration: 20 Days</p>
+            <a href="https://skillshop.withgoogle.com/" target="_blank" class="small-btn">Learn Now</a>
+          </article>
+          <article class="course-card reveal">
+            <i class="fa-solid fa-pen-nib"></i>
+            <h3>UI/UX Design</h3>
+            <p>Level: Beginner</p>
+            <p>Duration: 25 Days</p>
+            <a href="https://www.figma.com/resources/learn-design/" target="_blank" class="small-btn">Learn Now</a>
+          </article>
+          <article class="course-card reveal">
+            <i class="fa-brands fa-python"></i>
+            <h3>Python</h3>
+            <p>Level: Beginner</p>
+            <p>Duration: 30 Days</p>
+            <a href="https://www.kaggle.com/learn/python" target="_blank" class="small-btn">Learn Now</a>
+          </article>
+          <article class="course-card reveal">
+            <i class="fa-brands fa-java"></i>
+            <h3>Java</h3>
+            <p>Level: Beginner</p>
+            <p>Duration: 35 Days</p>
+            <a href="https://www.w3schools.com/java/" target="_blank" class="small-btn">Learn Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section-padding soft-bg">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Certificates</span>
+          <h2>Top Company Free Certificates</h2>
+          <p>Earn credentials from leading companies and boost your resume.</p>
+        </div>
+        <div class="cards-grid cert-grid" id="certGrid"></div>
+      </div>
+    </section>
+
+    <section id="steps" class="section-padding">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Roadmap</span>
+          <h2>How to Learn Step by Step</h2>
+        </div>
+        <div class="timeline">
+          <div class="step reveal"><b>01</b><p>Choose one skill</p></div>
+          <div class="step reveal"><b>02</b><p>Learn basics</p></div>
+          <div class="step reveal"><b>03</b><p>Practice daily</p></div>
+          <div class="step reveal"><b>04</b><p>Build mini projects</p></div>
+          <div class="step reveal"><b>05</b><p>Upload projects to GitHub</p></div>
+          <div class="step reveal"><b>06</b><p>Add certificate to LinkedIn</p></div>
+          <div class="step reveal"><b>07</b><p>Apply for internship/job</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tips" class="section-padding soft-bg">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Tips</span>
+          <h2>Learning Tips for Students</h2>
+        </div>
+        <div class="tips-grid">
+          <div class="tip reveal"><i class="fa-regular fa-clock"></i><h3>Daily 2 Hours</h3><p>1 hour learning + 1 hour practice every day.</p></div>
+          <div class="tip reveal"><i class="fa-solid fa-book"></i><h3>Take Notes</h3><p>Write concise notes to review later.</p></div>
+          <div class="tip reveal"><i class="fa-solid fa-diagram-project"></i><h3>Practice Projects</h3><p>Build small real-world examples.</p></div>
+          <div class="tip reveal"><i class="fa-solid fa-briefcase"></i><h3>Build Portfolio</h3><p>Showcase your best work online.</p></div>
+          <div class="tip reveal"><i class="fa-brands fa-linkedin"></i><h3>Post on LinkedIn</h3><p>Share certificates and progress updates.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Free Skill Learning Hub</h3>
+        <p>Helping students find free skill courses and certificates with a modern learning roadmap.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: hello@skillhub.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <div class="socials"><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Free Skill Learning Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

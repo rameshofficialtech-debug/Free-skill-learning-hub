@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Free Skill Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo"><i class="fa-solid fa-graduation-cap"></i> Free Skill Learning Hub</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="subscription.html">Subscription</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard section-padding">
+    <div class="container">
+      <div class="dash-hero reveal">
+        <div>
+          <span class="dash-kicker">Student dashboard</span>
+          <h1>Welcome, <span id="dashboardStudentName">Student</span></h1>
+          <p>Keep building skills, collecting certificates, and growing your portfolio.</p>
+        </div>
+        <a href="index.html#courses" class="btn secondary-btn">Explore New Courses</a>
+      </div>
+
+      <section class="subscription-summary reveal" aria-labelledby="subscriptionTitle">
+        <div class="subscription-summary-head">
+          <div><span class="eyebrow">Your membership</span><h2 id="subscriptionTitle">Subscription Status</h2></div>
+          <span class="status-badge status-none" id="subscriptionStatus">No plan</span>
+        </div>
+        <div class="subscription-stats">
+          <div><span>Plan</span><strong id="currentPlan">No active plan</strong></div>
+          <div><span>Free trial remaining</span><strong id="trialDays">0 days</strong></div>
+          <div><span>Expiry date</span><strong id="expiryDate">Not available</strong></div>
+          <div><span>Payment method</span><strong id="dashboardPaymentMethod">Not selected</strong></div>
+        </div>
+        <div class="dashboard-subscription-actions" id="dashboardSubscriptionActions" hidden>
+          <select id="dashboardPlanSelect" aria-label="Select a subscription plan"><option value="Monthly">Monthly Plan - ₹30</option><option value="3 Months">3 Months Plan - ₹50</option><option value="6 Months">6 Months Plan - ₹80</option></select>
+          <button class="btn primary-btn" id="changePlanBtn" type="button">Change Plan</button>
+          <button class="btn cancel-plan-btn" id="cancelSubscriptionBtn" type="button">Cancel AutoPay</button>
+        </div>
+        <a href="subscription.html" class="btn primary-btn" id="choosePlanBtn">Choose a Plan</a>
+      </section>
+
+      <div class="dash-grid">
+        <div class="dash-card reveal">
+          <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
+          <h3>My Courses</h3>
+          <div class="dashboard-links"><a href="https://www.freecodecamp.org/learn" target="_blank" rel="noopener noreferrer">Web Development <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://docs.python.org/3/tutorial/" target="_blank" rel="noopener noreferrer">Python <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://help.figma.com/" target="_blank" rel="noopener noreferrer">UI/UX <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+        </div>
+        <div class="dash-card reveal">
+          <div class="card-icon"><i class="fa-solid fa-certificate"></i></div>
+          <h3>My Certificates</h3>
+          <div class="dashboard-links"><a href="https://grow.google/" target="_blank" rel="noopener noreferrer">Google Certificates <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://www.netacad.com/" target="_blank" rel="noopener noreferrer">Cisco Networking <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+        </div>
+        <div class="dash-card reveal progress-card">
+          <div class="card-icon"><i class="fa-solid fa-chart-simple"></i></div>
+          <h3>Progress Tracker</h3>
+          <p>Overall learning completion</p>
+          <div class="progress-line"><div style="width:65%"></div></div>
+          <span class="progress-value">65% Completed</span>
+        </div>
+        <div class="dash-card reveal">
+          <div class="card-icon"><i class="fa-solid fa-route"></i></div>
+          <h3>Recommended Path</h3>
+          <ol>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Build portfolio projects</li>
+            <li>Learn Git and GitHub</li>
+            <li>Apply for internships</li>
+          </ol>
+        </div>
+        <div class="dash-card reveal">
+          <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Recommended Courses</h3>
+          <div class="dashboard-links"><a href="https://grow.google/ai/" target="_blank" rel="noopener noreferrer">Google AI Courses <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://skillsbuild.org" target="_blank" rel="noopener noreferrer">IBM Data Analytics <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://academy.hubspot.com/" target="_blank" rel="noopener noreferrer">HubSpot Academy <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
